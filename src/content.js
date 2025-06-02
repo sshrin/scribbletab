@@ -251,6 +251,7 @@ class WebAnnotator {
     window.addEventListener('scroll', () => {
       if (this.isActive) {
         this.updateCanvasPosition();
+        this.updateTextAnnotations();
       }
     });
   }
@@ -432,8 +433,9 @@ class WebAnnotator {
   }
 
   startTextInput(e) {
-    const x = e.clientX;
-    const y = e.clientY;
+    // Store the page-relative position (including current scroll)
+    const x = e.clientX + window.scrollX;
+    const y = e.clientY + window.scrollY;
 
     this.textInput.style.left = `${x}px`;
     this.textInput.style.top = `${y}px`;
@@ -611,7 +613,14 @@ class WebAnnotator {
   }
 
   updateCanvasPosition() {
-    this.canvas.style.top = `${window.scrollY}px`;
+    // Move canvas in opposite direction of scroll to stay with page content
+    this.canvas.style.top = `${-window.scrollY}px`;
+  }
+
+  updateTextAnnotations() {
+    // Text annotations are already positioned absolutely relative to page,
+    // so they should move with the content automatically since they use
+    // page-relative coordinates (including scroll offset when created)
   }
 
   toggle() {
@@ -620,6 +629,7 @@ class WebAnnotator {
     
     if (this.isActive) {
       this.resizeCanvas();
+      this.updateCanvasPosition(); // Set initial position
       this.saveState();
       this.showToolbar();
     } else {

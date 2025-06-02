@@ -182,7 +182,7 @@
   }
   
   .wa-text-annotation {
-    position: fixed;
+    position: absolute;
     background: transparent;
     border: none;
     padding: 2px 4px;
