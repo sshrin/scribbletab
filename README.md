@@ -125,4 +125,3 @@ MIT License
 - Undo/redo functionality  
 - Draggable, hideable toolbar
 - Keyboard shortcuts
-- Professional UI design
