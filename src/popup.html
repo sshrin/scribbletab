@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 200px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    .button {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: none;
+      border-radius: 5px;
+      background: #4285f4;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .button:hover {
+      background: #3367d6;
+    }
+    .button.secondary {
+      background: #34a853;
+    }
+    .button.secondary:hover {
+      background: #2d8f47;
+    }
+    .status {
+      text-align: center;
+      margin: 10px 0;
+      padding: 8px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+    .status.active {
+      background: #e8f5e8;
+      color: #2d5a2d;
+    }
+    .status.inactive {
+      background: #f5f5f5;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div id="status" class="status inactive">Annotations: Inactive</div>
+  
+  <button id="toggleBtn" class="button">Start Annotating</button>
+  <button id="clearBtn" class="button secondary">Clear All</button>
+  
+  <div style="margin: 15px 0; border-top: 1px solid #eee; padding-top: 15px;">
+    <div style="font-size: 12px; color: #666; margin-bottom: 8px;">Quick Start:</div>
+    <div style="font-size: 11px; color: #888; line-height: 1.4;">
+      • Click "Start Annotating" to begin<br>
+      • Use the floating toolbar to draw<br>
+      • Press ESC to exit annotation mode
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

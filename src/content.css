@@ -1,0 +1,196 @@
+/* Web Annotator Overlay Styles */
+#web-annotator-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2147483647;
+    pointer-events: none;
+    display: none;
+  }
+  
+  #web-annotator-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: crosshair;
+    pointer-events: auto;
+  }
+  
+  #web-annotator-toolbar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    pointer-events: auto;
+    z-index: 2147483648;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 14px;
+    min-width: 200px;
+    cursor: move;
+  }
+  
+  .wa-toolbar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+    cursor: move;
+  }
+  
+  .wa-toolbar-title {
+    font-weight: 600;
+    color: #333;
+    font-size: 13px;
+  }
+  
+  .wa-toolbar-controls {
+    display: flex;
+    gap: 4px;
+  }
+  
+  .wa-toolbar-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  
+  .wa-tool-btn {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    font-size: 18px;
+    font-weight: bold;
+    user-select: none;
+  }
+  
+  .wa-tool-btn:hover {
+    background: #f5f5f5;
+    border-color: #999;
+  }
+  
+  .wa-tool-btn.active {
+    background: #4285f4;
+    color: white;
+    border-color: #4285f4;
+  }
+  
+  .wa-tool-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .wa-tool-btn:disabled:hover {
+    background: white;
+    border-color: #ddd;
+  }
+  
+  .wa-mini-btn {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.2s;
+    user-select: none;
+  }
+  
+  .wa-mini-btn:hover {
+    background: #f5f5f5;
+  }
+  
+  .wa-color-picker {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .wa-slider {
+    width: 100px;
+    margin: 0 8px;
+  }
+  
+  .wa-text-input {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 6px 8px;
+    font-size: 12px;
+    width: 120px;
+  }
+  
+  .wa-control-group {
+    border-top: 1px solid #eee;
+    padding-top: 8px;
+    margin-top: 4px;
+  }
+  
+  .wa-control-group:first-child {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+  }
+  
+  .wa-label {
+    font-size: 11px;
+    color: #666;
+    margin-right: 8px;
+    min-width: 35px;
+  }
+  
+  #web-annotator-text-input {
+    position: fixed;
+    background: white;
+    border: 2px solid #4285f4;
+    border-radius: 4px;
+    padding: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    min-width: 150px;
+    min-height: 30px;
+    resize: both;
+    outline: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    display: none;
+    pointer-events: auto;
+    z-index: 2147483650;
+  }
+  
+  .wa-text-annotation {
+    position: fixed;
+    background: transparent;
+    border: none;
+    padding: 2px 4px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    pointer-events: none;
+    white-space: pre-wrap;
+    max-width: 300px;
+    word-wrap: break-word;
+    z-index: 2147483649;
+  }
